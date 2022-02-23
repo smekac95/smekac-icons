@@ -7,13 +7,13 @@ const SMKC_ICONS_MAP = {
 
 async function getIcon(name) {
   return {path: SMKC_ICONS_MAP[name]?.path};
-}
+};
 async function getIconList() {
   return Object.entries(SMKC_ICONS_MAP).map(([icon, content]) => ({
     name: icon,
     keywords: content.keywords,
   }));
-}
+};
 
 window.customIcons = window.customIcons || {};
 window.customIcons["smkc"] = { getIcon, getIconList };
